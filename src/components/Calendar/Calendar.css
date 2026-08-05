@@ -1,0 +1,125 @@
+.calendar {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-4);
+  width: 100%;
+}
+
+.calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: var(--space-3);
+}
+
+.calendar__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+.calendar__weekday {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.calendar__cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  min-height: 40px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: default;
+}
+
+.calendar__cell--button {
+  cursor: pointer;
+}
+
+.calendar__cell--button:hover {
+  background: var(--color-bg-muted);
+}
+
+.calendar__day {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  font-variant-numeric: tabular-nums;
+}
+
+.calendar__cell--today {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+}
+
+.calendar__cell--selected {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.calendar__cell--selected:hover {
+  background: var(--color-primary);
+}
+
+.calendar__dots {
+  display: flex;
+  gap: 3px;
+  margin-top: 3px;
+}
+
+.calendar__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+}
+
+.calendar__dot--accent {
+  background: var(--color-accent);
+}
+.calendar__dot--info {
+  background: var(--color-info);
+}
+.calendar__dot--success {
+  background: var(--color-success);
+}
+.calendar__dot--warning {
+  background: var(--color-warning);
+}
+.calendar__dot--danger {
+  background: var(--color-danger);
+}
+
+@media (max-width: 480px) {
+  .calendar {
+    padding: var(--space-3);
+  }
+
+  .calendar__cell {
+    min-height: 32px;
+  }
+
+  .calendar__dots {
+    display: none;
+  }
+}

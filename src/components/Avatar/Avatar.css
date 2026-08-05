@@ -1,0 +1,101 @@
+.avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-muted);
+  color: var(--color-text-muted);
+  overflow: visible;
+}
+
+.avatar--sm {
+  width: 32px;
+  height: 32px;
+  font-size: var(--font-size-xs);
+}
+
+.avatar--md {
+  width: 40px;
+  height: 40px;
+  font-size: var(--font-size-sm);
+}
+
+.avatar--lg {
+  width: 56px;
+  height: 56px;
+  font-size: var(--font-size-lg);
+}
+
+.avatar--xl {
+  width: 80px;
+  height: 80px;
+  font-size: var(--font-size-2xl);
+}
+
+.avatar__img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.avatar__emoji,
+.avatar__initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  background: var(--color-primary-subtle);
+}
+
+.avatar--sm .avatar__emoji {
+  font-size: var(--font-size-base);
+}
+
+.avatar--md .avatar__emoji {
+  font-size: var(--font-size-lg);
+}
+
+.avatar--lg .avatar__emoji {
+  font-size: var(--font-size-2xl);
+}
+
+.avatar--xl .avatar__emoji {
+  font-size: var(--font-size-3xl);
+}
+
+.avatar__status {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0.28em;
+  height: 0.28em;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-surface);
+  background: var(--color-border-strong);
+}
+
+.avatar--sm .avatar__status {
+  min-width: 7px;
+  min-height: 7px;
+}
+
+.avatar__status--online {
+  background: var(--color-success);
+}
+
+.avatar__status--away {
+  background: var(--color-warning);
+}
+
+.avatar__status--offline {
+  background: var(--color-text-muted);
+}

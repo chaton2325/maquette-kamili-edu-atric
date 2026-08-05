@@ -1,0 +1,97 @@
+.chart-ph {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  min-height: var(--chart-ph-height, 260px);
+}
+
+.chart-ph__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.chart-ph__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.chart-ph__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-muted);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+}
+
+.chart-ph__body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  min-height: 160px;
+}
+
+.chart-ph__skeleton {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+}
+
+.chart-ph__skeleton rect {
+  fill: var(--color-primary-subtle);
+}
+
+.chart-ph__skeleton polyline,
+.chart-ph__skeleton circle {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chart-ph__skeleton circle[stroke-width='20'] {
+  stroke: var(--color-primary-subtle);
+}
+
+.chart-ph__skeleton path {
+  fill: var(--color-primary-subtle);
+  stroke: var(--color-primary);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.chart-ph__skeleton polygon {
+  fill: var(--color-primary-subtle);
+  stroke: var(--color-primary);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.chart-ph__footer {
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 480px) {
+  .chart-ph__body {
+    padding: var(--space-4);
+  }
+}

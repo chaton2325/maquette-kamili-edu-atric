@@ -1,0 +1,80 @@
+.msg {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid transparent;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+}
+
+.msg--interactive {
+  cursor: pointer;
+}
+
+.msg--interactive:hover {
+  background: var(--color-bg-muted);
+  border-color: var(--color-border);
+}
+
+.msg--unread {
+  background: var(--color-primary-subtle);
+}
+
+.msg__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.msg__line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.msg__name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.msg__time {
+  flex-shrink: 0;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.msg__preview {
+  margin: 0;
+  margin-top: 2px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.msg--unread .msg__name {
+  color: var(--color-primary);
+}
+
+.msg--unread .msg__preview {
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.msg__dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+}

@@ -1,0 +1,89 @@
+.usercard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+}
+
+.usercard--interactive {
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.usercard--interactive:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-lg);
+}
+
+.usercard__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.usercard__identity {
+  flex: 1;
+  min-width: 0;
+}
+
+.usercard__name {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.usercard__role {
+  margin: 0;
+  margin-top: 2px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.usercard__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.usercard__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.usercard__meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.usercard__meta-icon {
+  display: inline-flex;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 480px) {
+  .usercard {
+    padding: var(--space-4);
+  }
+
+  .usercard__head {
+    gap: var(--space-3);
+  }
+}
