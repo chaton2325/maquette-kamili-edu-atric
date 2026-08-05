@@ -1,0 +1,290 @@
+.catalogue {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.catalogue__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-align: center;
+  padding-block: var(--space-6);
+  align-items: center;
+}
+
+.catalogue__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.catalogue__title {
+  font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-4xl));
+  letter-spacing: var(--letter-spacing-tight);
+  margin: 0;
+}
+
+.catalogue__accent {
+  color: var(--color-primary);
+}
+
+.catalogue__subtitle {
+  max-width: 60ch;
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  text-align: center;
+}
+
+.catalogue__filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.catalogue__tabs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.catalogue__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.catalogue__tab:hover {
+  border-color: var(--color-border-strong);
+}
+
+.catalogue__tab--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.catalogue__selects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-3);
+}
+
+.catalogue__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.catalogue__field--grow {
+  min-width: 220px;
+}
+
+.catalogue__label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.catalogue__select {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  width: 100%;
+}
+
+.catalogue__count {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.catalogue__empty {
+  padding: var(--space-8);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+}
+
+.catalogue__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-4);
+}
+
+.cat-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.cat-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.cat-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-subtle);
+  font-size: var(--font-size-xl);
+}
+
+.cat-card__identity {
+  flex: 1;
+  min-width: 0;
+}
+
+.cat-card__name {
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.cat-card__acronym {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.cat-card__meta {
+  margin: 0;
+  margin-top: 2px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.cat-card__description {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+}
+
+.cat-card__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.cat-card__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-2) var(--space-2);
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-md);
+}
+
+.cat-card__stat-value {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.cat-card__stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.cat-card__levels {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.cat-card__level {
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-muted);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.cat-card__level--more {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cat-card__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  padding-top: var(--space-1);
+}
+
+.cat-card__actions .btn {
+  text-decoration: none;
+}
+
+.cat-card__contact {
+  margin-left: auto;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.cat-enroll {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.cat-enroll__intro {
+  margin: 0;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-muted);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.cat-enroll__actions {
+  margin-top: var(--space-1);
+}
+
+@media (max-width: 640px) {
+  .cat-card__stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

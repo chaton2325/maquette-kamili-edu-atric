@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import EmptyLayout from '../layouts/EmptyLayout/EmptyLayout.jsx'
 import AuthLayout from '../layouts/AuthLayout/AuthLayout.jsx'
+import Establishments from '../pages/Establishments/Establishments.jsx'
 import DashboardLayout from '../layouts/DashboardLayout/DashboardLayout.jsx'
 import Home from '../pages/Home/Home.jsx'
 import Login from '../pages/auth/Login/Login.jsx'
@@ -87,7 +88,10 @@ export const router = createBrowserRouter([
   {
     path: '/',
     element: <EmptyLayout />,
-    children: [{ index: true, element: <Home /> }],
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'etablissements', element: <Establishments /> },
+    ],
   },
   {
     path: '/auth',

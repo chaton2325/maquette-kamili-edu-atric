@@ -21,7 +21,10 @@ function Home() {
         l’éducation au Cameroun.
       </p>
       <div className="landing__actions">
-        <Link to="/auth/login" className="btn btn--primary btn--lg">
+        <Link to="/etablissements" className="btn btn--primary btn--lg">
+          Parcourir les établissements
+        </Link>
+        <Link to="/auth/login" className="btn btn--secondary btn--lg">
           Se connecter
         </Link>
         <Link to="/auth/role" className="btn btn--secondary btn--lg">

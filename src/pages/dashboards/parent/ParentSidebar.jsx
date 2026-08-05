@@ -6,6 +6,7 @@ const navItems = [
   { to: '/dashboard/parent/overview', label: 'Tableau de bord', icon: '📊' },
   { to: '/dashboard/parent/statistics', label: 'Statistiques', icon: '📈' },
   { to: '/dashboard/parent/children', label: 'Mes enfants', icon: '🎓' },
+  { to: '/etablissements', label: 'Établissements', icon: '🏛️' },
   { to: '/dashboard/parent/register', label: 'Inscrire un élève', icon: '➕' },
   { to: '/dashboard/parent/payments', label: 'Paiements', icon: '💳' },
   { to: '/dashboard/parent/attendance', label: 'Présences', icon: '🗓️' },

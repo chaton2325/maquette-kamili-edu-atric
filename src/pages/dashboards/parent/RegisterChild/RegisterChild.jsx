@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import Input from '../../../../components/Input/Input.jsx'
 import Button from '../../../../components/Button/Button.jsx'
 import Alert from '../../../../components/Alert/Alert.jsx'
@@ -46,6 +47,27 @@ const schoolOptions = [
   'Lycée de Mvolyé',
 ]
 
+const cataloguedSchools = [
+  ...new Set(
+    [
+      'École Publique de Nkolbisson',
+      'École Publique de Bonamoussadi',
+      'École Bilingue La Réussite',
+      'École Maternelle Les Bourgeons',
+      'École Publique de Maroua I',
+      'École Publique de Foumbot',
+      'Lycée Général Leclerc',
+      'Lycée Bilingue de Yaoundé',
+      'Collège Vogt',
+      'Lycée Joss',
+      'Collège Notre-Dame',
+      'Lycée Bilingue de Dschang',
+      'Lycée de Maroua',
+      'Lycée Bilingue de Limbé',
+    ].concat(schoolOptions),
+  ),
+]
+
 const relationOptions = ['Père', 'Mère', 'Tuteur', 'Tutrice', 'Grands-parents']
 
 const feeByLevel = {
@@ -81,8 +103,14 @@ const paymentVariant = {
 }
 
 function RegisterChild() {
+  const [searchParams] = useSearchParams()
+  const preselectSchool = searchParams.get('school') ?? ''
   const [children, setChildren] = useState(initialChildren)
-  const [form, setForm] = useState(emptyOptions)
+  const [form, setForm] = useState({
+    ...emptyOptions,
+    school:
+      cataloguedSchools.includes(preselectSchool) ? preselectSchool : '',
+  })
   const [error, setError] = useState(null)
   const [added, setAdded] = useState(null)
 
@@ -272,7 +300,7 @@ function RegisterChild() {
                 onChange={handleChange('school')}
               >
                 <option value="">Sélectionner…</option>
-                {schoolOptions.map((school) => (
+                {cataloguedSchools.map((school) => (
                   <option key={school} value={school}>
                     {school}
                   </option>
