@@ -1,0 +1,19 @@
+/*
+ * Points de rupture de référence pour tout le design system.
+ * Le CSS ne permet pas d'utiliser var() dans une condition @media :
+ * ces valeurs sont donc dupliquées en dur dans les media queries des
+ * composants. Ce fichier sert de source de vérité documentée.
+ *
+ *   sm  480px  — mobile large
+ *   md  768px  — tablette
+ *   lg  1024px — petit desktop
+ *   xl  1280px — desktop
+ *   2xl 1536px — grand écran
+ */
+:root {
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}

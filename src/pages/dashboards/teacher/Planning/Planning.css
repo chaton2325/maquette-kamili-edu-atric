@@ -1,0 +1,76 @@
+.planning-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.planning-day {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.planning-day__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.planning-day__sessions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.planning-session {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-primary-subtle);
+  border-left: 3px solid var(--color-primary);
+}
+
+.planning-session__time {
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+}
+
+.planning-session__class {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.planning-session__meta {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.planning-day__empty {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .planning-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .planning-grid {
+    grid-template-columns: 1fr;
+  }
+}

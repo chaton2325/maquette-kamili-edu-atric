@@ -1,0 +1,268 @@
+/* ---------------------------------------------------------------------- */
+/* Palettes brutes (échelles 50 -> 900)                                    */
+/* ---------------------------------------------------------------------- */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Vert (marque / actions principales) */
+  --green-50: #f0fdf4;
+  --green-100: #dcfce7;
+  --green-200: #bbf7d0;
+  --green-300: #86efac;
+  --green-400: #4ade80;
+  --green-500: #22c55e;
+  --green-600: #16a34a;
+  --green-700: #15803d;
+  --green-800: #166534;
+  --green-900: #14532d;
+
+  /* Or (accent secondaire / mise en avant) */
+  --gold-50: #fffbeb;
+  --gold-100: #fef3c7;
+  --gold-200: #fde68a;
+  --gold-300: #fcd34d;
+  --gold-400: #f6c244;
+  --gold-500: #e5a82e;
+  --gold-600: #c4881b;
+  --gold-700: #9c6b14;
+  --gold-800: #7a5310;
+  --gold-900: #5c3f0c;
+
+  /* Gris (neutres, texte, surfaces, bordures) */
+  --gray-50: #fafafa;
+  --gray-100: #f4f4f5;
+  --gray-200: #e4e4e7;
+  --gray-300: #d4d4d8;
+  --gray-400: #a1a1aa;
+  --gray-500: #71717a;
+  --gray-600: #52525b;
+  --gray-700: #3f3f46;
+  --gray-800: #27272a;
+  --gray-900: #18181b;
+  --gray-950: #09090b;
+
+  /* Rouge (danger uniquement — indispensable pour alertes/erreurs) */
+  --red-50: #fef2f2;
+  --red-100: #fee2e2;
+  --red-300: #fca5a5;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Tokens sémantiques — thème clair (par défaut)                          */
+/* ---------------------------------------------------------------------- */
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --color-bg: var(--white);
+  --color-bg-subtle: var(--gray-50);
+  --color-bg-muted: var(--gray-100);
+  --color-surface: var(--white);
+  --color-surface-hover: var(--gray-50);
+  --color-overlay: rgba(24, 24, 27, 0.5);
+
+  /* Texte */
+  --color-text: var(--gray-900);
+  --color-text-secondary: var(--gray-600);
+  --color-text-muted: var(--gray-500);
+  --color-text-inverse: var(--white);
+  --color-text-on-accent: var(--gray-900);
+
+  /* Bordures */
+  --color-border: var(--gray-200);
+  --color-border-strong: var(--gray-300);
+
+  /* Marque */
+  --color-primary: var(--green-600);
+  --color-primary-hover: var(--green-700);
+  --color-primary-active: var(--green-800);
+  --color-primary-subtle: var(--green-50);
+  --color-primary-border: var(--green-200);
+
+  --color-accent: var(--gold-500);
+  --color-accent-hover: var(--gold-600);
+  --color-accent-active: var(--gold-700);
+  --color-accent-subtle: var(--gold-50);
+  --color-accent-border: var(--gold-200);
+
+  /* États sémantiques */
+  --color-success: var(--green-600);
+  --color-success-subtle: var(--green-50);
+  --color-success-border: var(--green-200);
+
+  --color-warning: var(--gold-600);
+  --color-warning-subtle: var(--gold-50);
+  --color-warning-border: var(--gold-200);
+
+  --color-danger: var(--red-600);
+  --color-danger-subtle: var(--red-50);
+  --color-danger-border: var(--red-100);
+
+  --color-info: var(--gray-700);
+  --color-info-subtle: var(--gray-100);
+  --color-info-border: var(--gray-200);
+
+  /* Focus */
+  --color-focus-ring: rgba(22, 163, 74, 0.35);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Tokens sémantiques — thème sombre                                       */
+/* Automatique via prefers-color-scheme, override manuel via [data-theme]  */
+/* ---------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --color-bg: #0f1012;
+    --color-bg-subtle: #16171c;
+    --color-bg-muted: #1c1d22;
+    --color-surface: #17181c;
+    --color-surface-hover: #1f2025;
+    --color-overlay: rgba(0, 0, 0, 0.6);
+
+    --color-text: var(--gray-100);
+    --color-text-secondary: #b4b4ba;
+    --color-text-muted: #8b8b92;
+    --color-text-inverse: var(--gray-900);
+    --color-text-on-accent: var(--gray-900);
+
+    --color-border: #2e2f36;
+    --color-border-strong: #3a3b42;
+
+    --color-primary: var(--green-500);
+    --color-primary-hover: var(--green-400);
+    --color-primary-active: var(--green-300);
+    --color-primary-subtle: rgba(34, 197, 94, 0.12);
+    --color-primary-border: rgba(34, 197, 94, 0.3);
+
+    --color-accent: var(--gold-400);
+    --color-accent-hover: var(--gold-300);
+    --color-accent-active: var(--gold-200);
+    --color-accent-subtle: rgba(246, 194, 68, 0.12);
+    --color-accent-border: rgba(246, 194, 68, 0.3);
+
+    --color-success: var(--green-500);
+    --color-success-subtle: rgba(34, 197, 94, 0.12);
+    --color-success-border: rgba(34, 197, 94, 0.3);
+
+    --color-warning: var(--gold-400);
+    --color-warning-subtle: rgba(246, 194, 68, 0.12);
+    --color-warning-border: rgba(246, 194, 68, 0.3);
+
+    --color-danger: #f87171;
+    --color-danger-subtle: rgba(248, 113, 113, 0.12);
+    --color-danger-border: rgba(248, 113, 113, 0.3);
+
+    --color-info: var(--gray-300);
+    --color-info-subtle: var(--gray-800);
+    --color-info-border: var(--gray-700);
+
+    --color-focus-ring: rgba(74, 222, 128, 0.4);
+  }
+}
+
+/* Override manuel (ex: data-theme="dark" posé sur <html>) */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-bg: #0f1012;
+  --color-bg-subtle: #16171c;
+  --color-bg-muted: #1c1d22;
+  --color-surface: #17181c;
+  --color-surface-hover: #1f2025;
+  --color-overlay: rgba(0, 0, 0, 0.6);
+
+  --color-text: var(--gray-100);
+  --color-text-secondary: #b4b4ba;
+  --color-text-muted: #8b8b92;
+  --color-text-inverse: var(--gray-900);
+  --color-text-on-accent: var(--gray-900);
+
+  --color-border: #2e2f36;
+  --color-border-strong: #3a3b42;
+
+  --color-primary: var(--green-500);
+  --color-primary-hover: var(--green-400);
+  --color-primary-active: var(--green-300);
+  --color-primary-subtle: rgba(34, 197, 94, 0.12);
+  --color-primary-border: rgba(34, 197, 94, 0.3);
+
+  --color-accent: var(--gold-400);
+  --color-accent-hover: var(--gold-300);
+  --color-accent-active: var(--gold-200);
+  --color-accent-subtle: rgba(246, 194, 68, 0.12);
+  --color-accent-border: rgba(246, 194, 68, 0.3);
+
+  --color-success: var(--green-500);
+  --color-success-subtle: rgba(34, 197, 94, 0.12);
+  --color-success-border: rgba(34, 197, 94, 0.3);
+
+  --color-warning: var(--gold-400);
+  --color-warning-subtle: rgba(246, 194, 68, 0.12);
+  --color-warning-border: rgba(246, 194, 68, 0.3);
+
+  --color-danger: #f87171;
+  --color-danger-subtle: rgba(248, 113, 113, 0.12);
+  --color-danger-border: rgba(248, 113, 113, 0.3);
+
+  --color-info: var(--gray-300);
+  --color-info-subtle: var(--gray-800);
+  --color-info-border: var(--gray-700);
+
+  --color-focus-ring: rgba(74, 222, 128, 0.4);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --color-bg: var(--white);
+  --color-bg-subtle: var(--gray-50);
+  --color-bg-muted: var(--gray-100);
+  --color-surface: var(--white);
+  --color-surface-hover: var(--gray-50);
+  --color-overlay: rgba(24, 24, 27, 0.5);
+
+  --color-text: var(--gray-900);
+  --color-text-secondary: var(--gray-600);
+  --color-text-muted: var(--gray-500);
+  --color-text-inverse: var(--white);
+  --color-text-on-accent: var(--gray-900);
+
+  --color-border: var(--gray-200);
+  --color-border-strong: var(--gray-300);
+
+  --color-primary: var(--green-600);
+  --color-primary-hover: var(--green-700);
+  --color-primary-active: var(--green-800);
+  --color-primary-subtle: var(--green-50);
+  --color-primary-border: var(--green-200);
+
+  --color-accent: var(--gold-500);
+  --color-accent-hover: var(--gold-600);
+  --color-accent-active: var(--gold-700);
+  --color-accent-subtle: var(--gold-50);
+  --color-accent-border: var(--gold-200);
+
+  --color-success: var(--green-600);
+  --color-success-subtle: var(--green-50);
+  --color-success-border: var(--green-200);
+
+  --color-warning: var(--gold-600);
+  --color-warning-subtle: var(--gold-50);
+  --color-warning-border: var(--gold-200);
+
+  --color-danger: var(--red-600);
+  --color-danger-subtle: var(--red-50);
+  --color-danger-border: var(--red-100);
+
+  --color-info: var(--gray-700);
+  --color-info-subtle: var(--gray-100);
+  --color-info-border: var(--gray-200);
+
+  --color-focus-ring: rgba(22, 163, 74, 0.35);
+}

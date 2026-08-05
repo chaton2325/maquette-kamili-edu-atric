@@ -1,0 +1,108 @@
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-5);
+}
+
+.chart-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.chart-card__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.chart-svg {
+  width: 100%;
+  height: auto;
+}
+
+.chart-axis {
+  stroke: var(--color-border);
+  stroke-width: 1;
+}
+
+.chart-bar {
+  fill: var(--color-primary);
+}
+
+.chart-value-label {
+  fill: var(--color-text);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.chart-axis-label {
+  fill: var(--color-text-muted);
+  font-size: 11px;
+}
+
+/* Barre empilée de statut (examens) */
+.status-bar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.status-bar__track {
+  display: flex;
+  height: 16px;
+  gap: 2px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--color-bg-muted);
+}
+
+.status-bar__segment {
+  min-width: 2px;
+}
+
+.status-bar__segment--a-venir {
+  background: var(--color-info);
+}
+.status-bar__segment--a-corriger {
+  background: var(--color-warning);
+}
+.status-bar__segment--corrige {
+  background: var(--color-success);
+}
+
+.status-bar__legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.status-bar__legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.status-bar__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.status-bar__dot--a-venir {
+  background: var(--color-info);
+}
+.status-bar__dot--a-corriger {
+  background: var(--color-warning);
+}
+.status-bar__dot--corrige {
+  background: var(--color-success);
+}

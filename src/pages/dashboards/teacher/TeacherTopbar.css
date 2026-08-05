@@ -1,0 +1,37 @@
+.teacher-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.teacher-topbar__title {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.teacher-topbar__user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.teacher-topbar__avatar {
+  font-size: var(--font-size-lg);
+  line-height: 1;
+}
+
+.teacher-topbar__name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 480px) {
+  .teacher-topbar__title {
+    display: none;
+  }
+
+  .teacher-topbar__name {
+    display: none;
+  }
+}

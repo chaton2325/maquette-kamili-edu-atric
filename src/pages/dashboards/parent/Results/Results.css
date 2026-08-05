@@ -1,0 +1,54 @@
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-5);
+}
+
+.results-entries {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.results-entry {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.results-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.results-entry__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.results-entry__term {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.results-entry__average {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.results-entry__rank {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.results-entry__appreciation {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.results-entry__action {
+  margin-top: var(--space-2);
+}

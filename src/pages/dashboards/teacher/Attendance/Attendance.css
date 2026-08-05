@@ -1,0 +1,30 @@
+.roster-list {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin: 0;
+}
+
+.roster-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.roster-item:last-child {
+  border-bottom: none;
+}
+
+.roster-item__name {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.roster-item__status {
+  cursor: pointer;
+}
