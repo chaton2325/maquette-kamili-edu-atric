@@ -1,0 +1,792 @@
+/* ---------------------------------------------------------------------- */
+/* Ministère — centre national de supervision (style Power BI)             */
+/* ---------------------------------------------------------------------- */
+.min-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* En-tête type « ruban » Power BI */
+.min-ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: var(--gray-800);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+}
+
+.min-ribbon__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+}
+
+.min-ribbon__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-weight: var(--font-weight-bold);
+}
+
+.min-ribbon__title {
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-sm);
+}
+
+.min-ribbon__subtitle {
+  color: #a1a1aa;
+  font-size: var(--font-size-xs);
+}
+
+.min-ribbon__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+/* Vue ministère (MINEDUB / MINESEC / MINESUP) */
+.min-view-tabs {
+  display: inline-flex;
+  background: var(--gray-700);
+  border-radius: var(--radius-md);
+  padding: 2px;
+  gap: 2px;
+}
+
+.min-view-tabs__button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: #d4d4d8;
+  white-space: nowrap;
+}
+
+.min-view-tabs__button:hover {
+  color: var(--color-text-inverse);
+}
+
+.min-view-tabs__button--active {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+/* Barre de filtres (sous le ruban) */
+.min-filters {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.min-filters__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 170px;
+}
+
+.min-filters__label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.min-filters__select {
+  height: 36px;
+  padding-inline: var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-subtle);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-sans);
+}
+
+.min-filters__reset {
+  align-self: center;
+}
+
+/* Cartes « visuel Power BI » */
+.pb-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.pb-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
+}
+
+.pb-card__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.pb-card__meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.pb-card__body {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.pb-card__body--flush {
+  padding: 0;
+}
+
+/* Grille de mise en page du canevas */
+.min-canvas {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-4);
+}
+
+.min-canvas__span-4 {
+  grid-column: span 4;
+}
+
+.min-canvas__span-5 {
+  grid-column: span 5;
+}
+
+.min-canvas__span-6 {
+  grid-column: span 6;
+}
+
+.min-canvas__span-7 {
+  grid-column: span 7;
+}
+
+.min-canvas__span-8 {
+  grid-column: span 8;
+}
+
+.min-canvas__span-12 {
+  grid-column: span 12;
+}
+
+/* KPI « tuiles Power BI » */
+.min-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: var(--space-4);
+}
+
+.min-kpi {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.min-kpi__label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.min-kpi__value {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  line-height: var(--line-height-tight);
+}
+
+.min-kpi__meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.min-kpi__delta {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.min-kpi__delta--up {
+  color: var(--color-success);
+}
+
+.min-kpi__delta--down {
+  color: var(--color-danger);
+}
+
+/* Cartographie */
+.min-map {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.min-map__svg {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+.min-map__cell {
+  cursor: pointer;
+  stroke: var(--color-surface);
+  stroke-width: 1;
+  outline: none;
+}
+
+.min-map__cell--selected {
+  stroke: var(--gray-900);
+  stroke-width: 2.5;
+}
+
+.min-map__label {
+  fill: var(--color-text-inverse);
+  font-size: 7px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.min-map__legend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.min-map__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.min-map__swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+/* Échelle choroplèthe (verte — une seule famille de teinte) */
+.min-map--1 {
+  fill: var(--green-200);
+}
+
+.min-map--2 {
+  fill: var(--green-300);
+}
+
+.min-map--3 {
+  fill: var(--green-500);
+}
+
+.min-map--4 {
+  fill: var(--green-600);
+}
+
+.min-map--5 {
+  fill: var(--green-800);
+}
+
+/* Métriques cartographiables */
+.min-map-metrics {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.min-map-metrics__button {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.min-map-metrics__button--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+/* Panneau région sélectionnée */
+.min-region-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.min-region-panel__name {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.min-region-panel__stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.min-region-panel__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.min-region-panel__value {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+/* Graphiques */
+.min-chart-svg {
+  width: 100%;
+  height: auto;
+}
+
+.min-chart-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.min-chart-axis {
+  stroke: var(--color-border-strong);
+  stroke-width: 1;
+}
+
+.min-chart-grid {
+  stroke: var(--color-border);
+  stroke-width: 1;
+  stroke-dasharray: 2 3;
+}
+
+.min-chart-grid-label {
+  fill: var(--color-text-muted);
+  font-size: 9px;
+}
+
+.min-chart-bar {
+  fill: var(--color-primary);
+}
+
+.min-chart-bar--secondary {
+  fill: var(--color-accent);
+}
+
+.min-chart-value-label {
+  fill: var(--color-text);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.min-chart-axis-label {
+  fill: var(--color-text-muted);
+  font-size: 10px;
+}
+
+.min-chart-area {
+  fill: var(--color-primary-subtle);
+}
+
+.min-chart-line {
+  stroke: var(--color-primary);
+  stroke-width: 2;
+}
+
+.min-chart-dot {
+  fill: var(--color-primary);
+}
+
+.min-chart-legend {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.min-chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.min-chart-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--color-primary);
+}
+
+.min-chart-legend-dot--secondary {
+  background: var(--color-accent);
+}
+
+/* Donut */
+.min-donut {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.min-donut__svg {
+  flex-shrink: 0;
+}
+
+.min-donut__track {
+  fill: none;
+  stroke: var(--color-bg-muted);
+}
+
+.min-donut__seg {
+  fill: none;
+}
+
+.min-donut__seg--shade-1 {
+  stroke: var(--green-700);
+}
+
+.min-donut__seg--shade-2 {
+  stroke: var(--green-500);
+}
+
+.min-donut__seg--shade-3 {
+  stroke: var(--green-300);
+}
+
+.min-donut__total {
+  fill: var(--color-text);
+  font-size: 22px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+.min-donut__legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.min-donut__legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.min-donut__swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+/* Barre de statut segmentée */
+.min-status {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.min-status__track {
+  display: flex;
+  height: 16px;
+  gap: 2px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--color-bg-muted);
+}
+
+.min-status__segment {
+  min-width: 2px;
+}
+
+.min-status__segment--success {
+  background: var(--color-success);
+}
+
+.min-status__segment--warning {
+  background: var(--color-warning);
+}
+
+.min-status__segment--danger {
+  background: var(--color-danger);
+}
+
+.min-status__segment--info {
+  background: var(--color-info);
+}
+
+.min-status__legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.min-status__legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.min-status__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.min-status__dot--success {
+  background: var(--color-success);
+}
+
+.min-status__dot--warning {
+  background: var(--color-warning);
+}
+
+.min-status__dot--danger {
+  background: var(--color-danger);
+}
+
+.min-status__dot--info {
+  background: var(--color-info);
+}
+
+/* Tableaux régionaux */
+.min-table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.min-table thead {
+  background: var(--color-bg-subtle);
+}
+
+.min-table th {
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+  font-size: var(--font-size-xs);
+}
+
+.min-table td {
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.min-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.min-table tbody tr:hover {
+  background: var(--color-surface-hover);
+}
+
+/* Disparités */
+.min-gauge {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.min-gauge__track {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.min-gauge__bar {
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-muted);
+  overflow: hidden;
+}
+
+.min-gauge__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+}
+
+.min-gauge__fill--low {
+  background: var(--color-warning);
+}
+
+.min-gauge__fill--very-low {
+  background: var(--color-danger);
+}
+
+/* Alertes */
+.min-alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.min-alert-item {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left-width: 3px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.min-alert-item--critique {
+  border-left-color: var(--color-danger);
+}
+
+.min-alert-item--importante {
+  border-left-color: var(--color-warning);
+}
+
+.min-alert-item--information {
+  border-left-color: var(--color-info);
+}
+
+.min-alert-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  font-size: 18px;
+  flex-shrink: 0;
+  background: var(--color-bg-muted);
+}
+
+.min-alert-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.min-alert-item__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.min-alert-item__detail {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.min-alert-item__meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* Pied de tableau régional */
+.min-region-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .min-canvas__span-4,
+  .min-canvas__span-5,
+  .min-canvas__span-6,
+  .min-canvas__span-7,
+  .min-canvas__span-8 {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 640px) {
+  .min-ribbon {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .min-ribbon__actions {
+    width: 100%;
+  }
+
+  .min-view-tabs {
+    width: 100%;
+  }
+
+  .min-view-tabs__button {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .min-kpi__value {
+    font-size: var(--font-size-xl);
+  }
+}

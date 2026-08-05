@@ -10,6 +10,9 @@ function RoleSelection() {
     eleve: '/dashboard/student',
     enseignant: '/dashboard/teacher',
     direction: '/dashboard/direction',
+    minedub: '/dashboard/ministry',
+    minesec: '/dashboard/ministry',
+    minesup: '/dashboard/ministry',
   }
 
   function handleSelect(roleId) {

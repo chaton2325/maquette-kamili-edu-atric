@@ -64,6 +64,11 @@ import DirectionCharts from '../pages/dashboards/direction/Charts/Charts.jsx'
 import DirectionAlerts from '../pages/dashboards/direction/Alerts/Alerts.jsx'
 import DirectionReports from '../pages/dashboards/direction/Reports/Reports.jsx'
 import DirectionProfile from '../pages/dashboards/direction/Profile/Profile.jsx'
+import MinistrySidebar from '../pages/dashboards/ministry/MinistrySidebar.jsx'
+import MinistryTopbar from '../pages/dashboards/ministry/MinistryTopbar.jsx'
+import MinistrySupervision from '../pages/dashboards/ministry/Supervision.jsx'
+import MinistryCharts from '../pages/dashboards/ministry/Graphiques.jsx'
+import MinistryAlerts from '../pages/dashboards/ministry/Alerts.jsx'
 
 export const router = createBrowserRouter([
   {
@@ -179,6 +184,20 @@ export const router = createBrowserRouter([
       { path: 'alerts', element: <DirectionAlerts /> },
       { path: 'reports', element: <DirectionReports /> },
       { path: 'profile', element: <DirectionProfile /> },
+    ],
+  },
+  {
+    path: '/dashboard/ministry',
+    element: (
+      <DashboardLayout
+        sidebar={<MinistrySidebar />}
+        topbar={<MinistryTopbar />}
+      />
+    ),
+    children: [
+      { index: true, element: <MinistrySupervision /> },
+      { path: 'charts', element: <MinistryCharts /> },
+      { path: 'alerts', element: <MinistryAlerts /> },
     ],
   },
 ])
