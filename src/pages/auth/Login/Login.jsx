@@ -15,7 +15,7 @@ function Login() {
     <form className="auth-form" onSubmit={handleSubmit}>
       <div className="auth-form__header">
         <h1>Connexion</h1>
-        <p>Accédez à votre espace Kamili Educ@tric.</p>
+        <p>Accédez à votre espace Kamili Edu Campus.</p>
       </div>
 
       <Input

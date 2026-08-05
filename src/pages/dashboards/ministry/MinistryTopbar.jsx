@@ -24,7 +24,7 @@ function MinistryTopbar({ view = 'MINEDUB' }) {
               Centre National de Supervision
             </div>
             <div className="ministry-topbar__subtitle">
-              Kamili Educ@tric · Système Éducatif du Cameroun
+              Kamili Edu Campus · Système Éducatif du Cameroun
             </div>
           </div>
         </div>

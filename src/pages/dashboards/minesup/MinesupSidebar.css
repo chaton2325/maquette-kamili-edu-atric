@@ -1,4 +1,4 @@
-.ministry-nav {
+.minesup-nav {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -6,7 +6,7 @@
   gap: var(--space-5);
 }
 
-.ministry-nav__brand {
+.minesup-nav__brand {
   display: flex;
   align-items: center;
   gap: var(--space-2);
@@ -14,32 +14,32 @@
   font-weight: var(--font-weight-bold);
 }
 
-.ministry-nav__brand-mark {
+.minesup-nav__brand-mark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 28px;
   height: 28px;
   border-radius: var(--radius-md);
-  background: var(--color-primary);
-  color: var(--color-text-inverse);
+  background: var(--color-accent);
+  color: #1c1205;
   font-size: var(--font-size-sm);
   flex-shrink: 0;
 }
 
-.ministry-nav__brand-name {
+.minesup-nav__brand-name {
   font-size: var(--font-size-sm);
   white-space: nowrap;
 }
 
-.ministry-nav__list {
+.minesup-nav__list {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
   overflow-y: auto;
 }
 
-.ministry-nav__link {
+.minesup-nav__link {
   display: flex;
   align-items: center;
   gap: var(--space-3);
@@ -51,44 +51,19 @@
   white-space: nowrap;
 }
 
-.ministry-nav__link:hover {
+.minesup-nav__link:hover {
   background: var(--color-bg-muted);
   color: var(--color-text);
 }
 
-.ministry-nav__link--active {
-  background: var(--color-primary-subtle);
-  color: var(--color-primary);
+.minesup-nav__link--active {
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
 }
 
-.ministry-nav__icon {
+.minesup-nav__icon {
   font-size: var(--font-size-base);
   line-height: 1;
   width: 20px;
   text-align: center;
-}
-
-.ministry-nav__group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  margin-top: auto;
-}
-
-.ministry-nav__group-label {
-  padding-inline: var(--space-3);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.ministry-nav__link--sub {
-  color: var(--color-accent);
-}
-
-.ministry-nav__link--sub:hover {
-  background: var(--color-accent-subtle);
-  color: var(--color-accent);
 }

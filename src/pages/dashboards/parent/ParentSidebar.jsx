@@ -6,6 +6,7 @@ const navItems = [
   { to: '/dashboard/parent/overview', label: 'Tableau de bord', icon: '📊' },
   { to: '/dashboard/parent/statistics', label: 'Statistiques', icon: '📈' },
   { to: '/dashboard/parent/children', label: 'Mes enfants', icon: '🎓' },
+  { to: '/dashboard/parent/register', label: 'Inscrire un élève', icon: '➕' },
   { to: '/dashboard/parent/payments', label: 'Paiements', icon: '💳' },
   { to: '/dashboard/parent/attendance', label: 'Présences', icon: '🗓️' },
   { to: '/dashboard/parent/grades', label: 'Notes', icon: '📝' },
@@ -21,7 +22,7 @@ function ParentSidebar() {
     <nav className="parent-nav">
       <div className="parent-nav__brand">
         <span className="parent-nav__brand-mark">K</span>
-        <span className="parent-nav__brand-name">Kamili Educ@tric</span>
+        <span className="parent-nav__brand-name">Kamili Edu Campus</span>
       </div>
       <ul className="parent-nav__list">
         {navItems.map((item) => (

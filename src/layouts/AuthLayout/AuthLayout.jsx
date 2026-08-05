@@ -7,7 +7,7 @@ function AuthLayout() {
       <div className="auth-layout__wrapper">
         <div className="auth-layout__brand">
           <span className="auth-layout__brand-mark">K</span>
-          <span>Kamili Educ@tric</span>
+          <span>Kamili Edu Campus</span>
         </div>
         <div className="auth-layout__panel">
           <Outlet />

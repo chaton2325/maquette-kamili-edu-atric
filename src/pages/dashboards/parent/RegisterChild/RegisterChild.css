@@ -1,0 +1,106 @@
+.children-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-4);
+}
+
+.register-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm), var(--ring-subtle);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.register-card:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.register-card__avatar {
+  font-size: var(--font-size-2xl);
+  line-height: 1;
+}
+
+.register-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.register-card__name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.register-card__meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.register-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.register-card--om {
+  margin-top: var(--space-5);
+}
+
+.om-header {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.om-badge {
+  font-size: var(--font-size-xl);
+  line-height: 1;
+}
+
+.om-intro {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.om-form {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.om-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-accent-subtle);
+}
+
+.om-summary__label {
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.om-summary__amount {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+}
+
+.btn--loading {
+  opacity: 0.7;
+  cursor: wait;
+}

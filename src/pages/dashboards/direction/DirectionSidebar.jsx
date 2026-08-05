@@ -5,6 +5,7 @@ const navItems = [
   { to: '/dashboard/direction', label: 'Vue générale', icon: '🏠', end: true },
   { to: '/dashboard/direction/enrollments', label: 'Effectifs', icon: '🎓' },
   { to: '/dashboard/direction/teachers', label: 'Enseignants', icon: '👩‍🏫' },
+  { to: '/dashboard/direction/permissions', label: 'Permissions', icon: '🔐' },
   { to: '/dashboard/direction/classes', label: 'Classes', icon: '🏫' },
   { to: '/dashboard/direction/attendance', label: 'Présences', icon: '🗓️' },
   { to: '/dashboard/direction/results', label: 'Résultats', icon: '🏆' },
@@ -21,7 +22,7 @@ function DirectionSidebar() {
     <nav className="direction-nav">
       <div className="direction-nav__brand">
         <span className="direction-nav__brand-mark">K</span>
-        <span className="direction-nav__brand-name">Kamili Educ@tric</span>
+        <span className="direction-nav__brand-name">Kamili Edu Campus</span>
       </div>
       <ul className="direction-nav__list">
         {navItems.map((item) => (

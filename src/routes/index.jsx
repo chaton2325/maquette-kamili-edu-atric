@@ -23,6 +23,7 @@ import ParentAgenda from '../pages/dashboards/parent/Agenda/Agenda.jsx'
 import ParentMessages from '../pages/dashboards/parent/Messages/Messages.jsx'
 import ParentNotifications from '../pages/dashboards/parent/Notifications/Notifications.jsx'
 import ParentProfile from '../pages/dashboards/parent/Profile/Profile.jsx'
+import ParentRegisterChild from '../pages/dashboards/parent/RegisterChild/RegisterChild.jsx'
 import StudentSidebar from '../pages/dashboards/student/StudentSidebar.jsx'
 import StudentTopbar from '../pages/dashboards/student/StudentTopbar.jsx'
 import StudentHome from '../pages/dashboards/student/Home/Home.jsx'
@@ -64,11 +65,23 @@ import DirectionCharts from '../pages/dashboards/direction/Charts/Charts.jsx'
 import DirectionAlerts from '../pages/dashboards/direction/Alerts/Alerts.jsx'
 import DirectionReports from '../pages/dashboards/direction/Reports/Reports.jsx'
 import DirectionProfile from '../pages/dashboards/direction/Profile/Profile.jsx'
+import DirectionPermissions from '../pages/dashboards/direction/Permissions/Permissions.jsx'
 import MinistrySidebar from '../pages/dashboards/ministry/MinistrySidebar.jsx'
 import MinistryTopbar from '../pages/dashboards/ministry/MinistryTopbar.jsx'
 import MinistrySupervision from '../pages/dashboards/ministry/Supervision.jsx'
 import MinistryCharts from '../pages/dashboards/ministry/Graphiques.jsx'
 import MinistryAlerts from '../pages/dashboards/ministry/Alerts.jsx'
+import MinistryEstablishments from '../pages/dashboards/ministry/Establishments.jsx'
+import MinistryTeachers from '../pages/dashboards/ministry/Teachers.jsx'
+import MinistryResults from '../pages/dashboards/ministry/Results.jsx'
+import MinesupSidebar from '../pages/dashboards/minesup/MinesupSidebar.jsx'
+import MinesupTopbar from '../pages/dashboards/minesup/MinesupTopbar.jsx'
+import MinesupHome from '../pages/dashboards/minesup/Home.jsx'
+import MinesupUniversities from '../pages/dashboards/minesup/Universities.jsx'
+import MinesupTeachers from '../pages/dashboards/minesup/Teachers.jsx'
+import MinesupResults from '../pages/dashboards/minesup/Results.jsx'
+import MinesupCharts from '../pages/dashboards/minesup/Charts.jsx'
+import MinesupAlerts from '../pages/dashboards/minesup/Alerts.jsx'
 
 export const router = createBrowserRouter([
   {
@@ -116,6 +129,7 @@ export const router = createBrowserRouter([
       { path: 'messages', element: <ParentMessages /> },
       { path: 'notifications', element: <ParentNotifications /> },
       { path: 'profile', element: <ParentProfile /> },
+      { path: 'register', element: <ParentRegisterChild /> },
     ],
   },
   {
@@ -184,6 +198,7 @@ export const router = createBrowserRouter([
       { path: 'alerts', element: <DirectionAlerts /> },
       { path: 'reports', element: <DirectionReports /> },
       { path: 'profile', element: <DirectionProfile /> },
+      { path: 'permissions', element: <DirectionPermissions /> },
     ],
   },
   {
@@ -196,8 +211,28 @@ export const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <MinistrySupervision /> },
+      { path: 'establishments', element: <MinistryEstablishments /> },
+      { path: 'teachers', element: <MinistryTeachers /> },
+      { path: 'results', element: <MinistryResults /> },
       { path: 'charts', element: <MinistryCharts /> },
       { path: 'alerts', element: <MinistryAlerts /> },
+    ],
+  },
+  {
+    path: '/dashboard/minesup',
+    element: (
+      <DashboardLayout
+        sidebar={<MinesupSidebar />}
+        topbar={<MinesupTopbar />}
+      />
+    ),
+    children: [
+      { index: true, element: <MinesupHome /> },
+      { path: 'universities', element: <MinesupUniversities /> },
+      { path: 'teachers', element: <MinesupTeachers /> },
+      { path: 'results', element: <MinesupResults /> },
+      { path: 'charts', element: <MinesupCharts /> },
+      { path: 'alerts', element: <MinesupAlerts /> },
     ],
   },
 ])

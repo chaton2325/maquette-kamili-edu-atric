@@ -22,7 +22,7 @@ function RoleSelection() {
   return (
     <section className="role-selection">
       <div className="role-selection__header">
-        <span className="role-selection__eyebrow">Kamili Educ@tric</span>
+        <span className="role-selection__eyebrow">Kamili Edu Campus</span>
         <h1>Choisissez votre profil</h1>
         <p>
           Sélectionnez le profil correspondant à votre utilisation de la

@@ -14,7 +14,7 @@ function Home() {
     <section className="landing">
       <span className="landing__badge">Maquette de démonstration</span>
       <h1 className="landing__title">
-        Kamili <span className="landing__accent">Educ@tric</span>
+        Kamili <span className="landing__accent">Edu Campus</span>
       </h1>
       <p className="landing__subtitle">
         La plateforme de gestion scolaire unifiée pour tous les acteurs de
@@ -47,6 +47,12 @@ function Home() {
           </Link>
         ))}
       </div>
+
+      <footer className="landing__footer">
+        <span>Kamili Edu Campus</span>
+        <span aria-hidden="true">·</span>
+        <span>by Atric Sarl</span>
+      </footer>
     </section>
   )
 }

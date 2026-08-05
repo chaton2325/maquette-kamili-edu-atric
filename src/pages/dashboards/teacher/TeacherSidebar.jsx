@@ -19,7 +19,7 @@ function TeacherSidebar() {
     <nav className="teacher-nav">
       <div className="teacher-nav__brand">
         <span className="teacher-nav__brand-mark">K</span>
-        <span className="teacher-nav__brand-name">Kamili Educ@tric</span>
+        <span className="teacher-nav__brand-name">Kamili Edu Campus</span>
       </div>
       <ul className="teacher-nav__list">
         {navItems.map((item) => (

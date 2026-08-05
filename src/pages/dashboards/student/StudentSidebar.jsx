@@ -22,7 +22,7 @@ function StudentSidebar() {
     <nav className="student-nav">
       <div className="student-nav__brand">
         <span className="student-nav__brand-mark">K</span>
-        <span className="student-nav__brand-name">Kamili Educ@tric</span>
+        <span className="student-nav__brand-name">Kamili Edu Campus</span>
       </div>
       <ul className="student-nav__list">
         {navItems.map((item) => (
