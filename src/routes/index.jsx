@@ -50,6 +50,20 @@ import TeacherMessages from '../pages/dashboards/teacher/Messages/Messages.jsx'
 import TeacherExams from '../pages/dashboards/teacher/Exams/Exams.jsx'
 import TeacherStatistics from '../pages/dashboards/teacher/Statistics/Statistics.jsx'
 import TeacherProfile from '../pages/dashboards/teacher/Profile/Profile.jsx'
+import DirectionSidebar from '../pages/dashboards/direction/DirectionSidebar.jsx'
+import DirectionTopbar from '../pages/dashboards/direction/DirectionTopbar.jsx'
+import DirectionHome from '../pages/dashboards/direction/Home/Home.jsx'
+import DirectionEnrollments from '../pages/dashboards/direction/Enrollments/Enrollments.jsx'
+import DirectionTeachers from '../pages/dashboards/direction/Teachers/Teachers.jsx'
+import DirectionClasses from '../pages/dashboards/direction/Classes/Classes.jsx'
+import DirectionAttendance from '../pages/dashboards/direction/Attendance/Attendance.jsx'
+import DirectionResults from '../pages/dashboards/direction/Results/Results.jsx'
+import DirectionPayments from '../pages/dashboards/direction/Payments/Payments.jsx'
+import DirectionFinances from '../pages/dashboards/direction/Finances/Finances.jsx'
+import DirectionCharts from '../pages/dashboards/direction/Charts/Charts.jsx'
+import DirectionAlerts from '../pages/dashboards/direction/Alerts/Alerts.jsx'
+import DirectionReports from '../pages/dashboards/direction/Reports/Reports.jsx'
+import DirectionProfile from '../pages/dashboards/direction/Profile/Profile.jsx'
 
 export const router = createBrowserRouter([
   {
@@ -142,6 +156,29 @@ export const router = createBrowserRouter([
       { path: 'exams', element: <TeacherExams /> },
       { path: 'statistics', element: <TeacherStatistics /> },
       { path: 'profile', element: <TeacherProfile /> },
+    ],
+  },
+  {
+    path: '/dashboard/direction',
+    element: (
+      <DashboardLayout
+        sidebar={<DirectionSidebar />}
+        topbar={<DirectionTopbar />}
+      />
+    ),
+    children: [
+      { index: true, element: <DirectionHome /> },
+      { path: 'enrollments', element: <DirectionEnrollments /> },
+      { path: 'teachers', element: <DirectionTeachers /> },
+      { path: 'classes', element: <DirectionClasses /> },
+      { path: 'attendance', element: <DirectionAttendance /> },
+      { path: 'results', element: <DirectionResults /> },
+      { path: 'payments', element: <DirectionPayments /> },
+      { path: 'finances', element: <DirectionFinances /> },
+      { path: 'charts', element: <DirectionCharts /> },
+      { path: 'alerts', element: <DirectionAlerts /> },
+      { path: 'reports', element: <DirectionReports /> },
+      { path: 'profile', element: <DirectionProfile /> },
     ],
   },
 ])
