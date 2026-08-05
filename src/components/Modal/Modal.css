@@ -7,6 +7,7 @@
   justify-content: center;
   padding: var(--space-6);
   z-index: 1000;
+  animation: fade-in 0.2s ease;
 }
 
 .modal {
@@ -17,9 +18,10 @@
   flex-direction: column;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl), var(--ring-subtle);
   overflow: hidden;
+  animation: scale-in 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .modal__header {
@@ -28,6 +30,7 @@
   justify-content: space-between;
   padding: var(--space-5) var(--space-6);
   border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
 }
 
 .modal__title {
@@ -75,6 +78,6 @@
   .modal {
     max-width: 100%;
     max-height: 85vh;
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
   }
 }

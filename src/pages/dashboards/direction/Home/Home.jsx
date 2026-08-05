@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom'
 import Card from '../../../../components/Card/Card.jsx'
+import Skeleton from '../../../../components/Skeleton/Skeleton.jsx'
 import { directionProfile } from '../../../../data/direction.js'
 import { schoolStats } from '../../../../data/direction.js'
 import { enrollmentByLevel } from '../../../../data/direction.js'
 import { alerts } from '../../../../data/direction.js'
 import { LineChart } from '../charts.jsx'
 import { enrollmentTrend } from '../../../../data/direction.js'
+import { useMockLoad } from '../../../../hooks/useMockLoad.js'
 import '../DirectionPage.css'
 
 const kpis = [
@@ -72,6 +74,50 @@ function Home() {
     (sum, level) => sum + level.students,
     0,
   )
+  const loading = useMockLoad()
+
+  if (loading) {
+    return (
+      <div className="dir-page">
+        <div className="dir-page__header">
+          <div className="dir-page__heading">
+            <Skeleton variant="title" width="50%" />
+            <Skeleton variant="text" width="55%" />
+          </div>
+        </div>
+        <section className="dir-page__section">
+          <Skeleton variant="title" width="35%" />
+          <div className="kpi-grid">
+            {[0, 1, 2, 3, 4, 5].map((i) => (
+              <div
+                key={i}
+                className="skeleton-card anim-fade-up"
+                style={{ '--delay': `${i * 40}ms` }}
+              >
+                <div className="skeleton-card__row">
+                  <Skeleton variant="avatar" width="44px" height="44px" />
+                  <div className="skeleton" style={{ flex: 1 }}>
+                    <Skeleton variant="text" width="70%" />
+                    <Skeleton variant="title" width="50%" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        <div className="dir-columns">
+          <div className="skeleton-card anim-fade-up">
+            <Skeleton variant="title" width="50%" />
+            <Skeleton variant="rect" height="180px" />
+          </div>
+          <div className="skeleton-card anim-fade-up" style={{ '--delay': '80ms' }}>
+            <Skeleton variant="title" width="50%" />
+            <Skeleton count={4} variant="text" />
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="dir-page">

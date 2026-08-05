@@ -45,11 +45,13 @@
   background: var(--color-primary);
   border-color: var(--color-primary);
   color: var(--color-surface);
+  box-shadow: 0 2px 8px var(--color-focus-ring);
 }
 
 .pagination__page--active:hover {
   background: var(--color-primary);
   border-color: var(--color-primary);
+  transform: translateY(-1px);
 }
 
 .pagination__arrow {

@@ -1,0 +1,82 @@
+.skeleton {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.skeleton__item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-sm);
+}
+
+.skeleton__item--text {
+  height: 14px;
+  width: 100%;
+}
+
+.skeleton__item--title {
+  height: 22px;
+  width: 60%;
+  border-radius: var(--radius-md);
+}
+
+.skeleton__item--avatar {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+}
+
+.skeleton__item--rect {
+  width: 100%;
+  height: 140px;
+  border-radius: var(--radius-lg);
+}
+
+.skeleton__item--line {
+  width: 100%;
+  height: 1px;
+  box-shadow: 0 0 0 1px var(--color-border);
+}
+
+/* Effet brillance (vetements) */
+.skeleton__item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-surface-hover),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton__item::after {
+    animation: pulse 2s ease-in-out infinite;
+  }
+}
+
+/* Bloc carte prêt à l’emploi */
+.skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.skeleton-card__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}

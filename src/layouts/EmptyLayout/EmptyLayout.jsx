@@ -4,7 +4,9 @@ import './EmptyLayout.css'
 function EmptyLayout() {
   return (
     <div className="empty-layout">
-      <Outlet />
+      <div className="empty-layout__inner">
+        <Outlet />
+      </div>
     </div>
   )
 }

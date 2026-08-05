@@ -1,3 +1,45 @@
+.notification-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.notification-toolbar .tabs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  overflow-x: auto;
+}
+
+.notification-toolbar .tabs__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: none;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.notification-toolbar .tabs__tab:hover {
+  color: var(--color-text);
+  background: var(--color-bg-muted);
+}
+
+.notification-toolbar .tabs__tab--active {
+  color: var(--color-primary);
+  background: var(--color-primary-subtle);
+}
+
 .notification-list {
   display: flex;
   flex-direction: column;

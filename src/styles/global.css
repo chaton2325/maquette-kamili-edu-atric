@@ -81,3 +81,178 @@ pre {
   display: flex;
   flex-direction: column;
 }
+
+/* ---------------------------------------------------------------------- */
+/* Anti-débordement global                                                */
+/* ---------------------------------------------------------------------- */
+html,
+body {
+  overflow-x: clip;
+}
+
+img,
+picture,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-wrap: break-word;
+}
+
+/* Barre de défilement harmonisée */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-strong) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: var(--radius-full);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------------- */
+/* Typographie fluide (harmonise Desktop / Laptop / Tablet)      */
+/* ------------------------------------------------------------- */
+@media (min-width: 768px) {
+  html {
+    font-size: 16.5px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+/* ------------------------------------------------------------- */
+/* Animations & micro-interactions                                 */
+/* ------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+a,
+button,
+[role='button'],
+select,
+input,
+textarea,
+summary {
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease,
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+/* Utilitaires d'apparition (respectent prefers-reduced-motion via block ci-dessus) */
+.anim-fade-up {
+  animation: fade-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.anim-scale-in {
+  animation: scale-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.anim-fade-in {
+  animation: fade-in 0.3s ease both;
+}
+
+/* Stagger léger : `style="--delay: i"` dans le JSX */
+[class*='anim-'] {
+  animation-delay: var(--delay, 0s);
+}
+
+/* Stagger automatique : applique .stagger sur un conteneur de cartes */
+.stagger > * {
+  animation: fade-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--stagger-base, 40ms) * var(--i, 1));
+}
+
+/* Refresh / transition de page */
+#root > * {
+  animation: fade-in 0.25s ease;
+}

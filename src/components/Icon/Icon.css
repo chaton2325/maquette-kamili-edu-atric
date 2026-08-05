@@ -1,0 +1,40 @@
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* Tailles harmonisées */
+.icon--xs {
+  font-size: var(--font-size-xs);
+}
+.icon--sm {
+  font-size: var(--font-size-sm);
+}
+.icon--base {
+  font-size: var(--font-size-base);
+}
+.icon--md {
+  font-size: var(--font-size-lg);
+}
+.icon--lg {
+  font-size: var(--font-size-xl);
+}
+
+/* Pastille colorée cohérente pour les mises en avant */
+.icon--tile {
+  width: 44px;
+  height: 44px;
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+}
+
+.icon--tile.icon--accent {
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+}

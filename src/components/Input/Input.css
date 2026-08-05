@@ -26,9 +26,11 @@
   color: var(--color-text);
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-md);
+  box-shadow: var(--ring-subtle);
   transition:
     border-color 0.15s ease,
-    box-shadow 0.15s ease;
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
 }
 
 .input::placeholder {
@@ -42,7 +44,7 @@
 .input:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px var(--color-focus-ring);
+  box-shadow: 0 0 0 3px var(--color-focus-ring), var(--ring-subtle);
 }
 
 .input:disabled {

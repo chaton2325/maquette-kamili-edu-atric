@@ -1,0 +1,106 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-5);
+  padding-block: var(--space-12);
+}
+
+.landing__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.landing__title {
+  font-size: clamp(var(--font-size-3xl), 6vw, var(--font-size-5xl));
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.landing__accent {
+  color: var(--color-primary);
+}
+
+.landing__subtitle {
+  max-width: 52ch;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.landing__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.landing__roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 880px;
+  margin-top: var(--space-8);
+}
+
+.landing__role {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.landing__role:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.landing__role-icon {
+  font-size: var(--font-size-xl);
+  line-height: 1;
+}
+
+.landing__role-label {
+  flex: 1;
+  text-align: left;
+  font-size: var(--font-size-sm);
+}
+
+.landing__role-arrow {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
+  transition: transform 0.2s ease;
+}
+
+.landing__role:hover .landing__role-arrow {
+  transform: translateX(3px);
+}
+
+@media (max-width: 640px) {
+  .landing__subtitle {
+    font-size: var(--font-size-base);
+  }
+}

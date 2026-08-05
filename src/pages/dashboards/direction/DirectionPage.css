@@ -406,32 +406,32 @@
 /* Segments nominaux (une seule famille de teinte, nuance seulement) */
 .dir-segmented-bar__segment--shade-1,
 .dir-segmented-bar__dot--shade-1 {
-  background: var(--green-700);
+  background: var(--wine-700);
 }
 
 .dir-segmented-bar__segment--shade-2,
 .dir-segmented-bar__dot--shade-2 {
-  background: var(--green-600);
+  background: var(--wine-600);
 }
 
 .dir-segmented-bar__segment--shade-3,
 .dir-segmented-bar__dot--shade-3 {
-  background: var(--green-500);
+  background: var(--wine-500);
 }
 
 .dir-segmented-bar__segment--shade-4,
 .dir-segmented-bar__dot--shade-4 {
-  background: var(--green-400);
+  background: var(--wine-400);
 }
 
 .dir-segmented-bar__segment--shade-5,
 .dir-segmented-bar__dot--shade-5 {
-  background: var(--green-300);
+  background: var(--wine-300);
 }
 
 .dir-segmented-bar__segment--shade-6,
 .dir-segmented-bar__dot--shade-6 {
-  background: var(--green-200);
+  background: var(--wine-200);
 }
 
 /* Donut */
@@ -456,27 +456,27 @@
 }
 
 .dir-donut__seg--shade-1 {
-  stroke: var(--green-700);
+  stroke: var(--wine-700);
 }
 
 .dir-donut__seg--shade-2 {
-  stroke: var(--green-600);
+  stroke: var(--wine-600);
 }
 
 .dir-donut__seg--shade-3 {
-  stroke: var(--green-500);
+  stroke: var(--wine-500);
 }
 
 .dir-donut__seg--shade-4 {
-  stroke: var(--green-400);
+  stroke: var(--wine-400);
 }
 
 .dir-donut__seg--shade-5 {
-  stroke: var(--green-300);
+  stroke: var(--wine-300);
 }
 
 .dir-donut__seg--shade-6 {
-  stroke: var(--green-200);
+  stroke: var(--wine-200);
 }
 
 .dir-donut__total {

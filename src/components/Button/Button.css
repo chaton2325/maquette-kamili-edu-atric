@@ -21,6 +21,10 @@
   transform: translateY(1px);
 }
 
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
 .btn:disabled {
   cursor: not-allowed;
   opacity: 0.5;
@@ -57,14 +61,18 @@
 
 /* Variantes */
 .btn--primary {
-  background: var(--color-primary);
+  background: linear-gradient(180deg, var(--wine-600), var(--wine-700));
   color: var(--color-text-inverse);
+  box-shadow: var(--shadow-xs), var(--ring-subtle);
+  border-color: var(--wine-800);
 }
 .btn--primary:hover:not(:disabled) {
-  background: var(--color-primary-hover);
+  background: linear-gradient(180deg, var(--wine-700), var(--wine-800));
+  box-shadow: var(--shadow-md), var(--ring-subtle);
 }
 .btn--primary:active:not(:disabled) {
-  background: var(--color-primary-active);
+  background: var(--wine-800);
+  box-shadow: none;
 }
 
 .btn--secondary {
@@ -74,20 +82,26 @@
 }
 .btn--secondary:hover:not(:disabled) {
   background: var(--color-bg-muted);
+  border-color: var(--color-text-muted);
+  box-shadow: var(--shadow-xs);
 }
 .btn--secondary:active:not(:disabled) {
   background: var(--color-border);
 }
 
 .btn--accent {
-  background: var(--color-accent);
+  background: linear-gradient(180deg, var(--gold-400), var(--gold-500));
   color: var(--color-text-on-accent);
+  box-shadow: var(--shadow-xs), var(--ring-subtle);
+  border-color: var(--gold-600);
 }
 .btn--accent:hover:not(:disabled) {
-  background: var(--color-accent-hover);
+  background: linear-gradient(180deg, var(--gold-500), var(--gold-600));
+  box-shadow: var(--shadow-md), var(--ring-subtle);
 }
 .btn--accent:active:not(:disabled) {
-  background: var(--color-accent-active);
+  background: var(--gold-600);
+  box-shadow: none;
 }
 
 .btn--ghost {

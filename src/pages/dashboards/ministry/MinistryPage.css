@@ -313,23 +313,23 @@
 
 /* Échelle choroplèthe (verte — une seule famille de teinte) */
 .min-map--1 {
-  fill: var(--green-200);
+  fill: var(--wine-200);
 }
 
 .min-map--2 {
-  fill: var(--green-300);
+  fill: var(--wine-300);
 }
 
 .min-map--3 {
-  fill: var(--green-500);
+  fill: var(--wine-500);
 }
 
 .min-map--4 {
-  fill: var(--green-600);
+  fill: var(--wine-600);
 }
 
 .min-map--5 {
-  fill: var(--green-800);
+  fill: var(--wine-800);
 }
 
 /* Métriques cartographiables */
@@ -494,15 +494,15 @@
 }
 
 .min-donut__seg--shade-1 {
-  stroke: var(--green-700);
+  stroke: var(--wine-700);
 }
 
 .min-donut__seg--shade-2 {
-  stroke: var(--green-500);
+  stroke: var(--wine-500);
 }
 
 .min-donut__seg--shade-3 {
-  stroke: var(--green-300);
+  stroke: var(--wine-300);
 }
 
 .min-donut__total {

@@ -2,14 +2,35 @@
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-sm), var(--ring-subtle);
   overflow: hidden;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Carte interactive : léger survol premium (à activer via className="card--interactive") */
+.card--interactive:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.card--interactive:active {
+  transform: translateY(0);
 }
 
 .card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
   padding: var(--space-5) var(--space-6);
   border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
   font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
 }
 
 .card__body {

@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
+import Skeleton from '../../../../components/Skeleton/Skeleton.jsx'
 import { studentProfile } from '../../../../data/studentProfile.js'
 import { studentGrades } from '../../../../data/studentGrades.js'
 import { homework } from '../../../../data/homework.js'
 import { studentNotifications } from '../../../../data/studentNotifications.js'
 import { studentAgendaEvents } from '../../../../data/studentAgenda.js'
+import { useMockLoad } from '../../../../hooks/useMockLoad.js'
 import '../StudentPage.css'
 import './Home.css'
 
@@ -32,6 +34,45 @@ function Home() {
   const upcomingEvents = [...studentAgendaEvents]
     .sort((a, b) => new Date(a.date) - new Date(b.date))
     .slice(0, 3)
+
+  const loading = useMockLoad()
+
+  if (loading) {
+    return (
+      <div className="student-page">
+        <div className="student-page__header">
+          <div className="student-page__heading">
+            <Skeleton variant="title" width="50%" />
+            <Skeleton variant="text" width="60%" />
+          </div>
+        </div>
+        <div className="stat-grid">
+          <div className="skeleton-card anim-fade-up">
+            <Skeleton variant="text" width="50%" />
+            <Skeleton variant="title" />
+          </div>
+          <div className="skeleton-card anim-fade-up" style={{ '--delay': '60ms' }}>
+            <Skeleton variant="text" width="50%" />
+            <Skeleton variant="title" />
+          </div>
+          <div className="skeleton-card anim-fade-up" style={{ '--delay': '120ms' }}>
+            <Skeleton variant="text" width="50%" />
+            <Skeleton variant="title" />
+          </div>
+        </div>
+        <div className="home-columns">
+          <div className="skeleton-card anim-fade-up">
+            <Skeleton variant="title" width="60%" />
+            <Skeleton count={3} variant="text" />
+          </div>
+          <div className="skeleton-card anim-fade-up" style={{ '--delay': '80ms' }}>
+            <Skeleton variant="title" width="60%" />
+            <Skeleton count={3} variant="text" />
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="student-page">

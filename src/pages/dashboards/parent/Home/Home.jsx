@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
+import Skeleton from '../../../../components/Skeleton/Skeleton.jsx'
 import { children } from '../../../../data/children.js'
 import { notifications } from '../../../../data/notifications.js'
 import { agendaEvents } from '../../../../data/agenda.js'
 import { parentProfile } from '../../../../data/parentProfile.js'
+import { useMockLoad } from '../../../../hooks/useMockLoad.js'
 import ChildCard from '../ChildCard.jsx'
 import '../ParentPage.css'
 import './Home.css'
@@ -15,10 +17,59 @@ function formatDate(dateStr) {
 }
 
 function Home() {
+  const loading = useMockLoad()
   const recentNotifications = notifications.slice(0, 3)
   const upcomingEvents = [...agendaEvents]
     .sort((a, b) => new Date(a.date) - new Date(b.date))
     .slice(0, 3)
+
+  if (loading) {
+    return (
+      <div className="parent-page">
+        <div className="parent-page__header">
+          <div className="parent-page__heading">
+            <Skeleton variant="title" width="50%" />
+            <Skeleton variant="text" width="70%" />
+          </div>
+        </div>
+        <section className="parent-page__section">
+          <Skeleton variant="title" width="30%" />
+          <div className="home-children">
+            <div className="skeleton-card anim-fade-up">
+              <div className="skeleton-card__row">
+                <Skeleton variant="avatar" />
+                <div className="skeleton" style={{ flex: 1 }}>
+                  <Skeleton variant="title" />
+                  <Skeleton variant="text" width="80%" />
+                </div>
+              </div>
+              <Skeleton variant="rect" height="64px" />
+            </div>
+            <div className="skeleton-card anim-fade-up" style={{ '--delay': '80ms' }}>
+              <div className="skeleton-card__row">
+                <Skeleton variant="avatar" />
+                <div className="skeleton" style={{ flex: 1 }}>
+                  <Skeleton variant="title" />
+                  <Skeleton variant="text" width="80%" />
+                </div>
+              </div>
+              <Skeleton variant="rect" height="64px" />
+            </div>
+            <div className="skeleton-card anim-fade-up" style={{ '--delay': '160ms' }}>
+              <div className="skeleton-card__row">
+                <Skeleton variant="avatar" />
+                <div className="skeleton" style={{ flex: 1 }}>
+                  <Skeleton variant="title" />
+                  <Skeleton variant="text" width="80%" />
+                </div>
+              </div>
+              <Skeleton variant="rect" height="64px" />
+            </div>
+          </div>
+        </section>
+      </div>
+    )
+  }
 
   return (
     <div className="parent-page">

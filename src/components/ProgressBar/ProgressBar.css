@@ -48,7 +48,15 @@
   height: 100%;
   border-radius: var(--radius-full);
   background: var(--color-primary);
+  transform-origin: left;
+  animation: progress-grow 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   transition: width 0.3s ease;
+}
+
+@keyframes progress-grow {
+  from {
+    transform: scaleX(0);
+  }
 }
 
 .progress--accent .progress__bar {

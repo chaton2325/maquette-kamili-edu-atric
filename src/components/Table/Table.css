@@ -3,6 +3,9 @@
   overflow-x: auto;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-xs);
+  -webkit-overflow-scrolling: touch;
 }
 
 .table {
@@ -20,8 +23,11 @@
 .table th {
   text-align: left;
   padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
-  color: var(--color-text-secondary);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
   border-bottom: 1px solid var(--color-border);
   white-space: nowrap;
 }
@@ -40,6 +46,17 @@
   background: var(--color-bg-subtle);
 }
 
+.table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
 .table tbody tr:hover {
   background: var(--color-surface-hover);
+}
+
+@media (max-width: 640px) {
+  .table th,
+  .table td {
+    padding: var(--space-2) var(--space-3);
+  }
 }

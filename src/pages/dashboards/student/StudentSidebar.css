@@ -64,29 +64,6 @@
 .student-nav__icon {
   font-size: var(--font-size-base);
   line-height: 1;
-}
-
-@media (max-width: 768px) {
-  .student-nav {
-    flex-direction: row;
-    align-items: center;
-    padding: var(--space-2);
-    gap: var(--space-2);
-  }
-
-  .student-nav__brand {
-    display: none;
-  }
-
-  .student-nav__list {
-    flex-direction: row;
-  }
-
-  .student-nav__link {
-    flex-direction: column;
-    gap: var(--space-1);
-    font-size: var(--font-size-xs);
-    text-align: center;
-    padding: var(--space-2);
-  }
+  width: 20px;
+  text-align: center;
 }
