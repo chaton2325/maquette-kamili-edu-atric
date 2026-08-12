@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import logo from '../../../assets/logo.jpeg'
 import './MinistrySidebar.css'
 
 const navItems = [
@@ -18,7 +19,7 @@ function MinistrySidebar() {
   return (
     <nav className="ministry-nav">
       <div className="ministry-nav__brand">
-        <span className="ministry-nav__brand-mark">K</span>
+        <img className="ministry-nav__brand-mark" src={logo} alt="Kamili Edu Campus" />
         <span className="ministry-nav__brand-name">Kamili Edu Campus</span>
       </div>
       <ul className="ministry-nav__list">

@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import logo from '../../../assets/logo.jpeg'
 import './MinesupSidebar.css'
 
 const navItems = [
@@ -14,7 +15,7 @@ function MinesupSidebar() {
   return (
     <nav className="minesup-nav">
       <div className="minesup-nav__brand">
-        <span className="minesup-nav__brand-mark">S</span>
+        <img className="minesup-nav__brand-mark" src={logo} alt="Kamili Edu Campus" />
         <span className="minesup-nav__brand-name">MINESUP · Universités</span>
       </div>
       <ul className="minesup-nav__list">

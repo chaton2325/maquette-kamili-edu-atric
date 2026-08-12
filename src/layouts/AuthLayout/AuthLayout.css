@@ -46,6 +46,8 @@
   background: var(--color-primary);
   color: var(--color-text-inverse);
   font-weight: var(--font-weight-bold);
+  object-fit: cover;
+  object-position: center;
 }
 
 .auth-layout__panel {

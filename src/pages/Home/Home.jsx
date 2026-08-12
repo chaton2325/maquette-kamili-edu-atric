@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import logo from '../../assets/logo.jpeg'
 import './Home.css'
 
 const roles = [
@@ -12,6 +13,7 @@ const roles = [
 function Home() {
   return (
     <section className="landing">
+      <img className="landing__logo" src={logo} alt="Kamili Edu Campus" />
       <span className="landing__badge">Maquette de démonstration</span>
       <h1 className="landing__title">
         Kamili <span className="landing__accent">Edu Campus</span>

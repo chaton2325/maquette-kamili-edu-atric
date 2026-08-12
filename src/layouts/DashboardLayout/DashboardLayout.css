@@ -125,6 +125,8 @@
   background: var(--gold-400);
   color: var(--gray-900);
   box-shadow: var(--shadow-xs);
+  object-fit: cover;
+  object-position: center;
 }
 
 .dashboard-layout__sidebar [class$='-nav__brand-name'] {

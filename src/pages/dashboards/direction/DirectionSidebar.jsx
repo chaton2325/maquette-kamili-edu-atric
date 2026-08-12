@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import logo from '../../../assets/logo.jpeg'
 import './DirectionSidebar.css'
 
 const navItems = [
@@ -21,7 +22,7 @@ function DirectionSidebar() {
   return (
     <nav className="direction-nav">
       <div className="direction-nav__brand">
-        <span className="direction-nav__brand-mark">K</span>
+        <img className="direction-nav__brand-mark" src={logo} alt="Kamili Edu Campus" />
         <span className="direction-nav__brand-name">Kamili Edu Campus</span>
       </div>
       <ul className="direction-nav__list">

@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import logo from '../../../assets/logo.jpeg'
 import './ParentSidebar.css'
 
 const navItems = [
@@ -22,7 +23,7 @@ function ParentSidebar() {
   return (
     <nav className="parent-nav">
       <div className="parent-nav__brand">
-        <span className="parent-nav__brand-mark">K</span>
+        <img className="parent-nav__brand-mark" src={logo} alt="Kamili Edu Campus" />
         <span className="parent-nav__brand-name">Kamili Edu Campus</span>
       </div>
       <ul className="parent-nav__list">
